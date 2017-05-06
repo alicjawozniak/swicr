@@ -1,0 +1,80 @@
+.container {
+    margin-top: 30px;
+    width: 95%;
+}
+.wrapper {
+    height: 70px;
+}
+.circle {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    border: 1px solid black;
+    border-radius: 50%;
+    transition: 1s;
+    -webkit-transition: 1s;
+    cursor: pointer;
+}
+.pointer {
+    width: 15px;
+    height: 15px;
+    z-index: 5;
+    position: fixed;
+    background-color: green;
+    border-radius: 50%;
+    transition:all 0.75s linear;
+    -webkit-transition:all 0.75s linear;
+}
+.circle:hover {
+    background-color: greenyellow;
+}
+.circle:hover span {
+    color: black;
+}
+.circle span {
+    position: relative;
+    top: 13px;
+    left: 19px;
+    color: white;
+    transition: 1s;
+    -webkit-transition: 1s;
+
+    cursor: pointer;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+}
+
+._jsPlumb_overlay {
+    color: lightseagreen;
+    cursor: default;
+    background-color: yellow;
+    border: 2px solid #C0C0C0;
+    word-wrap: break-word;
+    width: 28px !important;
+    text-align: center;
+    z-index: 1;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+}
+._jsPlumb_overlay span {
+    color: red;
+    display: block;
+}
+._jsPlumb_endpoint {
+    visibility: hidden;
+}
+.select-wrapper {
+    width: 70px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+#selectEnd option:disabled {
+    color: red;
+}
