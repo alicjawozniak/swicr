@@ -59,6 +59,8 @@ var nextStep = function() {
     /*currentPosition = connArray[beginning].targetId;
      setPointerPositionAt(currentPosition);*/
     getStep();
+    newRandomFactors();
+    resetAllLabels();
 };
 var offAllDisabledOptions = function (element) {
     for(var i = 0;i<element.options.length;i++){

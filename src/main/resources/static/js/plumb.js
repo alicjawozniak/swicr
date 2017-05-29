@@ -2,6 +2,7 @@
  * Created by Paweł on 18.04.2017.
  */
 var connArray = [];
+var resetAllLabels;
 jsPlumb.ready(function() {
     var p01 = jsPlumb.connect({
         source:'p0',
@@ -228,25 +229,27 @@ jsPlumb.ready(function() {
     connArray.push(p89);
     console.log(connArray);
     console.log(posA.B.dist);
-    p01.setLabel('' + posA.B.dist + '<span>' + posA.B.factor + '</span>');
-    p02.setLabel('' + posA.C.dist + '<span>' + posA.C.factor + '</span>');
-    p03.setLabel('' + posA.D.dist + '<span>' + posA.D.factor + '</span>');
-    p13.setLabel('' + posB.D.dist + '<span>' + posB.D.factor + '</span>');
-    p16.setLabel('' + posB.G.dist + '<span>' + posB.G.factor + '</span>');
-    p17.setLabel('' + posB.H.dist + '<span>' + posB.H.factor + '</span>');
-    p24.setLabel('' + posC.E.dist + '<span>' + posC.E.factor + '</span>');
-    p25.setLabel('' + posC.F.dist + '<span>' + posC.F.factor + '</span>');
-    p32.setLabel('' + posD.C.dist + '<span>' + posD.C.factor + '</span>');
-    p37.setLabel('' + posD.H.dist + '<span>' + posD.H.factor + '</span>');
-    p38.setLabel('' + posD.I.dist + '<span>' + posD.I.factor + '</span>');
-    p46.setLabel('' + posE.G.dist + '<span>' + posE.G.factor + '</span>');
-    p48.setLabel('' + posE.I.dist + '<span>' + posE.I.factor + '</span>');
-    p49.setLabel('' + posE.J.dist + '<span>' + posE.J.factor + '</span>');
-    p59.setLabel('' + posF.J.dist + '<span>' + posF.J.factor + '</span>');
-    p78.setLabel('' + posH.I.dist + '<span>' + posH.I.factor + '</span>');
-    p89.setLabel('' + posI.J.dist + '<span>' + posI.J.factor + '</span>');
-
-
+    resetAllLabels = function () {
+        console.log(posA.B.factor);
+        p01.setLabel('' + posA.B.dist + '<span>' + posA.B.factor + '</span>');
+        p02.setLabel('' + posA.C.dist + '<span>' + posA.C.factor + '</span>');
+        p03.setLabel('' + posA.D.dist + '<span>' + posA.D.factor + '</span>');
+        p13.setLabel('' + posB.D.dist + '<span>' + posB.D.factor + '</span>');
+        p16.setLabel('' + posB.G.dist + '<span>' + posB.G.factor + '</span>');
+        p17.setLabel('' + posB.H.dist + '<span>' + posB.H.factor + '</span>');
+        p24.setLabel('' + posC.E.dist + '<span>' + posC.E.factor + '</span>');
+        p25.setLabel('' + posC.F.dist + '<span>' + posC.F.factor + '</span>');
+        p32.setLabel('' + posD.C.dist + '<span>' + posD.C.factor + '</span>');
+        p37.setLabel('' + posD.H.dist + '<span>' + posD.H.factor + '</span>');
+        p38.setLabel('' + posD.I.dist + '<span>' + posD.I.factor + '</span>');
+        p46.setLabel('' + posE.G.dist + '<span>' + posE.G.factor + '</span>');
+        p48.setLabel('' + posE.I.dist + '<span>' + posE.I.factor + '</span>');
+        p49.setLabel('' + posE.J.dist + '<span>' + posE.J.factor + '</span>');
+        p59.setLabel('' + posF.J.dist + '<span>' + posF.J.factor + '</span>');
+        p78.setLabel('' + posH.I.dist + '<span>' + posH.I.factor + '</span>');
+        p89.setLabel('' + posI.J.dist + '<span>' + posI.J.factor + '</span>');
+    };
+    resetAllLabels();
 });
 $(window).resize(function() {
     jsPlumb.repaintEverything();
