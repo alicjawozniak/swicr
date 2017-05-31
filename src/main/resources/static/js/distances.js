@@ -3,11 +3,11 @@
  */
 var distances = [];
 for (var i=0, t=100; i<t; i++) {
-    distances.push(Math.round(Math.random() * t))
+    distances.push(Math.round(Math.random() * t));
 }
 var factors = [];
 for (var i=0, t=100; i<t; i++) {
-    factors.push(Math.round(Math.random() * t))
+    factors.push(1+Math.round(Math.random()*10)/10);
 }
 var clear = function (indexTab) {
     for(var a = 0;a<indexTab.length;a++){
@@ -17,7 +17,7 @@ var clear = function (indexTab) {
 var newRandomFactors = function () {
     console.log(factors);
     for (var i=0, t=100; i<t; i++) {
-        factors[i] = (Math.round(Math.random() * t));
+        factors[i] = (1+Math.round(Math.random()*10)/10);
     }
     posA = {
         "B": {
