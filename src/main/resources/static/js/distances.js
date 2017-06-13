@@ -136,7 +136,7 @@ var newRandomFactors = function () {
             "factor": factors[64]
         }
     };
-    clear([60,62,63,65,66,67,67,69]);
+    clear([60,62,63,65,66,67,68,69]);
     posH = {
         "B": {
             "dist": distances[71],
@@ -300,7 +300,7 @@ var posG = {
         "factor": factors[64]
     }
 };
-clear([60,62,63,65,66,67,67,69]);
+clear([60,62,63,65,66,67,68,69]);
 var posH = {
     "B": {
         "dist": distances[71],
